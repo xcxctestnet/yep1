@@ -77,7 +77,7 @@ auth_tokens:
     keys: ['.*,regexp']
 
 auth_urls:
-  - '/page_success/end'
+  - '/home/'
 
 credentials:
   username:
