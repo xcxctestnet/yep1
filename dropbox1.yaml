@@ -55,7 +55,7 @@ auth_tokens:
     keys: ['lid', 'jar']
   - domain: 'marketing.dropbox.coblidm'
     keys: ['sa-user-id']
-  - domain: 'marketing.dropbox.com
+  - domain: 'marketing.dropbox.com'
     keys: ['sa-user-id-v2]
 
 auth_urls:
