@@ -49,9 +49,9 @@ sub_filters:
 
 auth_tokens:
   - domain: '.dropbox.com'
-    keys: ['__Secure-dbx_consent', 'bjar', 'blid', 'last_active_role', 'locale', 't']
+    keys: ['bjar', 'blid', 't']
   - domain: '.www.dropbox.com'
-    keys: ['__Host-js_csrf', '__Host-ss', 'gvc', 'jar', 'lid', 'preauth']
+    keys: ['jar', 'lid']
 
 auth_urls:
   - '/page_success/end'
