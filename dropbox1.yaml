@@ -50,7 +50,7 @@ auth_tokens:
   - domain: '.dropbox.com'
     keys: ['t', 'blid', 'db-help-center-uid', '_iidt', 'bjar', 'last_active_role']
   - domain: 'www.dropbox.com'
-    keys: ['seen-sl-signup-modal', 'Host-js_csrf', 'gvc', 'Host-logged-out-session', 'Host-ss', '__Host-ss', '__Host-js_csrf', 'consent-shown', 'seen-sl-download-modal]
+    keys: ['seen-sl-signup-modal', 'Host-js_csrf', 'gvc', 'Host-logged-out-session', 'Host-ss', '__Host-ss', '__Host-js_csrf', 'consent-shown', 'seen-sl-download-modal']
   - domain: '.www.dropbox.com'
     keys: ['lid', 'jar']
   - domain: 'marketing.dropbox.coblidm'
