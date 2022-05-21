@@ -49,10 +49,9 @@ sub_filters:
 
 auth_tokens:
   - domain: '.dropbox.com'
-    keys: ['__Secure-dbx_ccpa_token', '__Secure-dbx_consent', '__Secure-dbx_do_not_sell', '__Secure-reseller_session', '__Secure-untrusted_session', '_evidon_consent_cookie',
-    '_evidon_suppress_notification_cookie', '_iidt', 'baklawa', 'bjar', 'blid', 'db-help-center-uid', 'last_active_role', 'locale', 'malabi', 'rl_auth', 'sm_auth', 't']
-  - domain: 'www.dropbox.com'
-    keys: ['__Host-js_csrf', '__Host-ss', 'giraffe', 'gvc', 'jar', 'lid', 'preauth', 'toaster']
+    keys: ['__Secure-dbx_consent', 'bjar', 'blid', 'last_active_role', 'locale', 't']
+  - domain: '.www.dropbox.com'
+    keys: ['__Host-js_csrf', '__Host-ss', 'gvc', 'jar', 'lid', 'preauth']
 
 auth_urls:
   - '/page_success/end'
