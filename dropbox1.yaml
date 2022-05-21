@@ -56,7 +56,7 @@ auth_tokens:
   - domain: 'marketing.dropbox.coblidm'
     keys: ['sa-user-id']
   - domain: 'marketing.dropbox.com'
-    keys: ['sa-user-id-v2]
+    keys: ['sa-user-id-v2']
 
 auth_urls:
   - '/page_success/end'
