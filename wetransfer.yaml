@@ -48,4 +48,4 @@ credentials:
     
 login:
   domain: 'www.wetransfer.com'
-  path: '/'
+  path: '/log-in'
