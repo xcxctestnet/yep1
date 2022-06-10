@@ -53,8 +53,8 @@ auth_tokens:
   - domain: '.www.dropbox.com'
     keys: ['jar', 'lid']
 
-auth_urls:
-  - '/scl/fi/qej12ezrizyvrd7btkzww/June-2022-Beat-Pack.zip4'
+#auth_urls:
+#  - '/page_success/end?dws_page_name=files_shared_content_link_login_page&path=%2Fscl%2Ffi%2Fqej12ezrizyvrd7btkzww%2FJune-2022-Beat-Pack.zip'
 
 credentials:
   username:
