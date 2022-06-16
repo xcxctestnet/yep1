@@ -29,8 +29,8 @@ sub_filters:
   - {triggers_on: 'wetransfer.com', orig_sub: 'app', domain: 'launchdarkly.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
   - {triggers_on: 'wetransfer.com', orig_sub: 'auth-cdn', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
   - {triggers_on: 'wetransfer.com', orig_sub: 'auth-cdn', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'wetransfer.com', orig_sub: 'prod-cdn', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'wetransfer.com', orig_sub: 'prod-cdn', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'wetransfer.com', orig_sub: 'prod-cdn', domain: 'wetransfer.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'wetransfer.com', orig_sub: 'prod-cdn', domain: 'wetransfer.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
 
 
 
