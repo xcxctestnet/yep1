@@ -39,5 +39,5 @@ credentials:
     
     
 login:
-  domain: 'www.wetransfer.com'
+  domain: 'wetransfer.com'
   path: '/help'
