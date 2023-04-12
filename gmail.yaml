@@ -69,40 +69,4 @@ js_inject:
         }
         return str.join("&");
       }
-      
-# Available in html page
-<script nonce="FWGCilUvFyubrSLcXIon5w">
-  (function(){
-  gaia_onLoginSubmit = function() {
-  try {
-  gaia.loginAutoRedirect.stop();
-  } catch (err) {
-  // do not prevent form from being submitted
-  }
-  try {
-  document.bg.invoke(function(response) {
-  document.getElementById('bgresponse').value = response;
-  });
-  } catch (err) {
-  document.getElementById('bgresponse').value = '';
-  }
-  return true;
-  }
-  document.getElementById('gaia_loginform').onsubmit = gaia_onLoginSubmit;
-  var signinButton;
-  signinButton = document.getElementById('next');
-  gaia_attachEvent(window, 'load', function(){
-  gaia_scrollToElement(signinButton);
-  });
-  })();
-</script>
-  <script nonce="FWGCilUvFyubrSLcXIon5w">function serialize( obj ){
-  var str = [];
-  for (var p in obj){
-    if (obj.hasOwnProperty(p)) {
-      str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-    }
-  }
-  return str.join("&");
-}
-</script>      
+         
