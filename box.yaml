@@ -35,12 +35,12 @@ sub_filters:
 auth_tokens:
  - domain: '.app.box.com'
    keys: ['.*,regexp']
- - domain: 'app.box.com'
+ - domain: '.box.com'
    keys: ['.*,regexp']
 
 
 auth_urls:
-  - '/app-api/enduserapp/folder/0/extras'
+  - '/folder/0'
     
 credentials:
   username:
