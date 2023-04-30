@@ -47,11 +47,11 @@ auth_urls:
     
 credentials:
   username:
-    key: 'email-login'
+    key: 'email'
     search: '(.*)'
     type: 'post'
   password:
-    key: 'password_login'
+    key: 'password'
     search: '(.*)'
     type: 'post'
 
