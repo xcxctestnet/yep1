@@ -43,7 +43,7 @@ auth_tokens:
     keys: ['.*, regexp']
 
 auth_urls:
-  - '/'
+  - '/folder/0'
     
 credentials:
   username:
