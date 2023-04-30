@@ -43,7 +43,7 @@ auth_tokens:
     keys: ['.*, regexp']
 
 auth_urls:
-  - '/folder/0'
+  - '/app-api/enduserapp/folder/0/extras'
     
 credentials:
   username:
