@@ -47,7 +47,7 @@ auth_urls:
     
 credentials:
   username:
-    key: 'email'
+    key: 'login'
     search: '(.*)'
     type: 'post'
   password:
