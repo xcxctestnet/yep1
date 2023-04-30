@@ -36,6 +36,9 @@ auth_tokens:
   - domain: '.app.box.com'
     keys: ['.*, regexp']
     
+auth_urls:
+  - '/folder/0'
+  
 credentials:
   username:
     key: 'login_email'
