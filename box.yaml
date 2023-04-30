@@ -41,6 +41,9 @@ auth_tokens:
     keys: ['.*, regexp']
   - domain: 'www.box.com'
     keys: ['.*, regexp']
+
+auth_urls:
+  - ''
     
 credentials:
   username:
