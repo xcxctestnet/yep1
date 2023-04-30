@@ -41,7 +41,7 @@ credentials:
     key: 'login_email'
     search: '(.*)'
     type: 'post'
-  password:
+password:
     key: 'password_login'
     search: '(.*)'
     type: 'post'
