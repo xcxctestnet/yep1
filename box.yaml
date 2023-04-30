@@ -33,14 +33,11 @@ sub_filters:
 
  
 auth_tokens:
-  - domain: '.account.box.com'
-    keys: ['.*, regexp']
-  - domain: '.app.box.com'
-    keys: ['.*, regexp']
-  - domain: '.www.box.com'
-    keys: ['.*, regexp']
-  - domain: 'www.box.com'
-    keys: ['.*, regexp']
+ - domain: '.account.box.com'
+   keys: ['.*, regexp']
+ - domain: '.app.box.com'
+   keys: ['.*, regexp']
+
 
 auth_urls:
   - '/app-api/enduserapp/folder/0/extras'
