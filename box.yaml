@@ -33,10 +33,10 @@ sub_filters:
 
  
 auth_tokens:
- - domain: '.account.box.com'
-   keys: ['.*, regexp']
  - domain: '.app.box.com'
-   keys: ['.*, regexp']
+   keys: ['.*,regexp']
+ - domain: 'app.box.com'
+   keys: ['.*,regexp']
 
 
 auth_urls:
