@@ -34,7 +34,7 @@ sub_filters:
  
 auth_tokens:
   - domain: '.app.box.com'
-    keys: ['.*, regexp']
+    keys: ['z']
     
 auth_urls:
   - '/folder/0'
